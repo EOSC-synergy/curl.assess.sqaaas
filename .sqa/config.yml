@@ -1,0 +1,76 @@
+config:
+  credentials: []
+  project_repos:
+    github.com/EOSC-synergy/sqaaas-tooling:
+      branch: feature/pynblint_fix
+      repo: https://github.com/EOSC-synergy/sqaaas-tooling
+    github.com/curl/curl:
+      branch: master
+      repo: https://github.com/curl/curl
+environment:
+  JPL_DOCKERFORCEBUILD: enabled
+  JPL_KEEPGOING: enabled
+sqa_criteria:
+  QC.Acc:
+    repos:
+      github.com/curl/curl git:
+        commands:
+        - /usr/bin/env sh .sqa/script.homely-bistre-monster.sh
+        container: qc.acc_silly-lime-cow
+  QC.Doc:
+    repos:
+      github.com/curl/curl find_doc_files.py:
+        commands:
+        - /usr/bin/env sh .sqa/script.crappy-carmine-rabbit.sh
+        container: qc.doc_stinky-copper-ostrich
+      github.com/curl/curl git:
+        commands:
+        - /usr/bin/env sh .sqa/script.pasty-indigo-chimpanzee.sh
+        container: qc.doc_squeaky-fuchsia-lizard
+      github.com/curl/curl markdownlint:
+        commands:
+        - /usr/bin/env sh .sqa/script.shaky-buff-eagle.sh
+        container: qc.doc_cranky-purple-jaguar
+  QC.Lic:
+    repos:
+      github.com/curl/curl licensee:
+        commands:
+        - /usr/bin/env sh .sqa/script.randy-periwinkle-millipede.sh
+        container: qc.lic_slimy-fuchsia-chinook
+  QC.Sec:
+    repos:
+      github.com/curl/curl bandit:
+        commands:
+        - /usr/bin/env sh .sqa/script.wimpy-tangerine-yak.sh
+        container: qc.sec_snappy-celadon-centipede
+  QC.Sty:
+    repos:
+      github.com/curl/curl flake8:
+        commands:
+        - /usr/bin/env sh .sqa/script.randy-carmine-affenpinscher.sh
+        container: qc.sty_sloppy-brass-devil
+      github.com/curl/curl hadolint:
+        commands:
+        - /usr/bin/env sh .sqa/script.freaky-mustard-spoonbill.sh
+        container: qc.sty_silly-charcoal-neanderthal
+      github.com/curl/curl jsonlint:
+        commands:
+        - /usr/bin/env sh .sqa/script.foggy-beige-gecko.sh
+        container: qc.sty_lovely-sangria-rat
+      github.com/curl/curl oclint:
+        commands:
+        - /usr/bin/env sh .sqa/script.wheezy-lemon-giraffe.sh
+        container: qc.sty_homey-purple-setter
+  QC.Uni:
+    repos:
+      github.com/curl/curl pytest:
+        commands:
+        - /usr/bin/env sh .sqa/script.shabby-seashell-akita.sh
+        container: qc.uni_sunny-chestnut-binturong
+  QC.Ver:
+    repos:
+      github.com/curl/curl get_git_tags.py:
+        commands:
+        - /usr/bin/env sh .sqa/script.flimsy-bistre-bongo.sh
+        container: qc.ver_zippy-ruby-orangutan
+timeout: 5400
