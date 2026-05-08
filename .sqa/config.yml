@@ -15,62 +15,62 @@ sqa_criteria:
     repos:
       github.com/curl/curl git:
         commands:
-        - /usr/bin/env sh .sqa/script.homely-bistre-monster.sh
-        container: qc.acc_silly-lime-cow
+        - /usr/bin/env sh .sqa/script.squeaky-cobalt-indri.sh
+        container: qc.acc_stuffy-dandelion-seahorse
   QC.Doc:
     repos:
       github.com/curl/curl find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.crappy-carmine-rabbit.sh
-        container: qc.doc_stinky-copper-ostrich
+        - /usr/bin/env sh .sqa/script.chummy-pumpkin-wombat.sh
+        container: qc.doc_dorky-mauve-wolf
       github.com/curl/curl git:
         commands:
-        - /usr/bin/env sh .sqa/script.pasty-indigo-chimpanzee.sh
-        container: qc.doc_squeaky-fuchsia-lizard
+        - /usr/bin/env sh .sqa/script.dorky-aquamarine-fly.sh
+        container: qc.doc_frumpy-denim-tarsier
       github.com/curl/curl markdownlint:
         commands:
-        - /usr/bin/env sh .sqa/script.shaky-buff-eagle.sh
-        container: qc.doc_cranky-purple-jaguar
+        - /usr/bin/env sh .sqa/script.goopy-white-koala.sh
+        container: qc.doc_slimy-jade-salamander
   QC.Lic:
     repos:
       github.com/curl/curl licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.randy-periwinkle-millipede.sh
-        container: qc.lic_slimy-fuchsia-chinook
+        - /usr/bin/env sh .sqa/script.flabby-lime-forest.sh
+        container: qc.lic_baggy-sapphire-chamois
   QC.Sec:
     repos:
       github.com/curl/curl bandit:
         commands:
-        - /usr/bin/env sh .sqa/script.wimpy-tangerine-yak.sh
-        container: qc.sec_snappy-celadon-centipede
+        - /usr/bin/env sh .sqa/script.boozy-chestnut-turtle.sh
+        container: qc.sec_gloppy-white-boar
   QC.Sty:
     repos:
       github.com/curl/curl flake8:
         commands:
-        - /usr/bin/env sh .sqa/script.randy-carmine-affenpinscher.sh
-        container: qc.sty_sloppy-brass-devil
+        - /usr/bin/env sh .sqa/script.lousy-ecru-liger.sh
+        container: qc.sty_squeaky-cyan-akita
       github.com/curl/curl hadolint:
         commands:
-        - /usr/bin/env sh .sqa/script.freaky-mustard-spoonbill.sh
-        container: qc.sty_silly-charcoal-neanderthal
+        - /usr/bin/env sh .sqa/script.freaky-tan-turkey.sh
+        container: qc.sty_ugly-tangerine-salamander
       github.com/curl/curl jsonlint:
         commands:
-        - /usr/bin/env sh .sqa/script.foggy-beige-gecko.sh
-        container: qc.sty_lovely-sangria-rat
+        - /usr/bin/env sh .sqa/script.silly-orange-axolotl.sh
+        container: qc.sty_slaphappy-zucchini-vole
       github.com/curl/curl oclint:
         commands:
-        - /usr/bin/env sh .sqa/script.wheezy-lemon-giraffe.sh
-        container: qc.sty_homey-purple-setter
+        - /usr/bin/env sh .sqa/script.surly-copper-alligator.sh
+        container: qc.sty_hilly-asparagus-ferret
   QC.Uni:
     repos:
       github.com/curl/curl pytest:
         commands:
-        - /usr/bin/env sh .sqa/script.shabby-seashell-akita.sh
-        container: qc.uni_sunny-chestnut-binturong
+        - /usr/bin/env sh .sqa/script.shabby-lime-worm.sh
+        container: qc.uni_stinky-bistre-olm
   QC.Ver:
     repos:
       github.com/curl/curl get_git_tags.py:
         commands:
-        - /usr/bin/env sh .sqa/script.flimsy-bistre-bongo.sh
-        container: qc.ver_zippy-ruby-orangutan
+        - /usr/bin/env sh .sqa/script.scanty-crimson-indri.sh
+        container: qc.ver_scanty-olivine-dodo
 timeout: 5400
